@@ -1,0 +1,18 @@
+{
+    "migration": {
+      "username": "root",
+      "password": "ajay@123",
+      "database": "coupon",
+      "host": "localhost",
+      "dialect": "mysql",
+      "logging": false
+    },
+    "development": {
+      "username": "root",
+      "password": "ajay@123",
+      "database": "coupon",
+      "host": "localhost",
+      "dialect": "mysql",
+      "logging": true
+    }
+  }

@@ -6,7 +6,7 @@
 # Node artifact files
 node_modules/
 dist/
-*/**/config.json
+# */**/config.json
 
 # Compiled Java class files
 *.class
@@ -49,7 +49,7 @@ Thumbs.db
 *.flv
 *.mov
 *.wmv
-# *.env
+*.env
 
 output.txt
 temp.txt

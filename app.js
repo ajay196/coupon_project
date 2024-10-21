@@ -1,11 +1,15 @@
+var dotenv = require('dotenv')
+var environment = process.argv.slice(2)[0] || 'development'
+dotenv.config({ path: `./env/${environment}.env` })
+process.env.NODE_ENV = environment
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var couponRouter = require('./routes/couponRoutes');
 
 var app = express();
 
@@ -19,8 +23,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/', couponRouter);
+app.get('/', ()=>{
+  console.log("=================");
+  
+})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

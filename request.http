@@ -1,0 +1,97 @@
+@BASE_DOMAIN = "locahost:3000"
+
+### Api documentation for coupon
+
+### create coupon (cart type)
+POST http://localhost:3000/coupon
+Content-Type: application/json
+
+{
+    "type":"cart-wise",
+    "details": {
+        "threshold": 100,
+        "discount": 10,
+        "discount_max_amount": 200,
+        "coupon_code": "AFHNBHBGS$%^#",
+        "expiry_date": "02-12-2025"
+    }
+}
+
+### create coupon (product type)
+POST http://localhost:3000/coupon
+Content-Type: application/json
+
+{
+    "type":"product-wise",
+    "details": {
+        "product_id": 1,
+        "discount": 10,
+        "discount_max_amount": 200,
+        "coupon_code": "AF23NBHBGS$%^#",
+        "expiry_date": "02-12-2025"
+    }
+}
+
+### create coupon (BxGy type)
+POST http://localhost:3000/coupon
+Content-Type: application/json
+
+{
+    "type":"bxgy",
+    "details": {
+        "buy_products": [
+            {"product_id": 1, "quantity": 3},
+            {"product_id": 2, "quantity": 3}
+        ],
+        "get_products": [
+            {"product_id": 3, "quantity": 1}
+        ],
+        "coupon_code": "AFeTEBBHBGS$%^#",
+        "expiry_date": "02-12-2025",
+        "repition_limit":2
+    }
+}
+
+
+### get coupon list
+GET http://localhost:3000/coupon
+Content-Type: application/json
+
+### get specific coupon by id
+GET http://localhost:3000/coupon/1
+Content-Type: application/json
+
+
+### delete specific coupon by id (soft delete)
+DELETE http://localhost:3000/coupon/1
+Content-Type: application/json
+
+
+### get all applicable coupon
+POST http://localhost:3000/applicable-coupons
+Content-Type: application/json
+
+{
+    "cart": {
+        "items": [
+            {"product_id": 1, "quantity": 6, "price": 50},
+            {"product_id": 2, "quantity": 3, "price": 30},
+            {"product_id": 3, "quantity": 2, "price": 25}
+        ]
+    }
+}
+
+
+### get all applicable coupon
+POST http://localhost:3000/apply-coupon/2
+Content-Type: application/json
+
+{
+    "cart": {
+        "items": [
+            {"product_id": 1, "quantity": 6, "price": 50},
+            {"product_id": 2, "quantity": 3, "price": 30},
+            {"product_id": 3, "quantity": 2, "price": 25}
+        ]
+    }
+}
