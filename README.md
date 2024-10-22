@@ -22,8 +22,8 @@ run migration
 ```
 
 start server using
-````
- npm start 
+```
+ npm start
 
 ```
 
