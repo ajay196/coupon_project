@@ -35,7 +35,7 @@ start server using
  coupon can be added, fetch , delete, list all coupon.
  get all the applicable coupon based on the cart product.
  apply specific coupon on the given cart products by coupon id.
- handle error for basic issue ( coupon expired, not fount, invalid).
+ handle error for basic issue ( coupon expired, not found, invalid).
 
 # Unimplemented Cases
  added coupon code (unique) for the external uses of the coupon
