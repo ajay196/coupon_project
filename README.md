@@ -32,19 +32,19 @@ start server using
 
 # Implemented Cases
 
- coupon can be added, fetch , delete, list all coupon
- get all the applicable coupon based on the cart product
- apply specific coupon on the given cart products by coupon id
- handle error for basic issue ( coupon expired, not fount, invalid)
+ coupon can be added, fetch , delete, list all coupon.
+ get all the applicable coupon based on the cart product.
+ apply specific coupon on the given cart products by coupon id.
+ handle error for basic issue ( coupon expired, not fount, invalid).
 
 # Unimplemented Cases
  added coupon code (unique) for the external uses of the coupon
 
 # Assumptions
 
- all the inactive coupon (is_active = '0') assume to be deleted
- only coupon whose expiry date is greater the current time assume to be active
- in case of buyxgety coupn threshold quantity will be the sum of all the quantity of the product in the buy array
+ all the inactive coupon (is_active = '0') assume to be deleted.
+ only coupon whose expiry date is greater the current time assume to be active.
+ in case of buyxgety coupn threshold quantity will be the sum of all the quantity of the product in the buy array.
 
  COUPON_TYPE : {
         "cart-wise":'1',
@@ -53,4 +53,4 @@ start server using
     }
 
 # Limitations
- all the payload need to be as per the given format
+ all the payload need to be as per the given format.
