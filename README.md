@@ -24,7 +24,6 @@ basic coupon functionality
  start server using
 ````
  npm start
-
 ```
 
  for using api in code editor use request.http file (use rest client to run the api in vs code)
