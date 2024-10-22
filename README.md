@@ -14,9 +14,10 @@ basic coupon functionality
 
 ```
  npm install
+```
 
  run migration
-
+```
  npx sequelize db:migrate
 ```
 
