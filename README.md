@@ -23,7 +23,8 @@ run migration
 
 start server using
 ````
- npm start
+ npm start 
+
 ```
 
 #for using api in code editor use request.http file (use rest client to run the api in vs code)
@@ -39,7 +40,7 @@ start server using
 # Unimplemented Cases
  added coupon code (unique) for the external uses of the coupon
 
- # Assumptions
+# Assumptions
 
  all the inactive coupon (is_active = '0') assume to be deleted
  only coupon whose expiry date is greater the current time assume to be active
@@ -51,5 +52,5 @@ start server using
         "bxgy":'3'
     }
 
- # Limitations
+# Limitations
  all the payload need to be as per the given format
