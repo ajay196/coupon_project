@@ -10,26 +10,26 @@ basic coupon functionality
  set up env file and variable
  update config file with your mysql database credential in (src/db/config/config.json)
 
- install Dependency Using npm cammand
+install Dependency Using npm cammand
 
 ```
  npm install
 ```
 
- run migration
+run migration
 ```
  npx sequelize db:migrate
 ```
 
- start server using
+start server using
 ````
  npm start
 ```
 
- for using api in code editor use request.http file (use rest client to run the api in vs code)
+for using api in code editor use request.http file (use rest client to run the api in vs code)
 
 
- # Implemented Cases
+# Implemented Cases
 
  coupon can be added, fetch , delete, list all coupon
  get all the applicable coupon based on the cart product
