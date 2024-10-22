@@ -113,7 +113,11 @@ async function applicableCoupon(req, res, next){
         // buyxgety coupon
         const buyx_coupon = await couponModel.findAll({
             where:{
-                type: COUPON_TYPE['bxgy']
+                type: COUPON_TYPE['bxgy'],
+                is_active:'1',
+                expiry_date:{
+                    [Op.gt]: Sequelize.fn('now')
+                }
             },
             raw: true
         })
