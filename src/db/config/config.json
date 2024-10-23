@@ -14,5 +14,13 @@
       "host": "localhost",
       "dialect": "mysql",
       "logging": true
+    },
+    "test": {
+      "username": "root",
+      "password": "ajay@123",
+      "database": "coupon",
+      "host": "localhost",
+      "dialect": "mysql",
+      "logging": true
     }
   }

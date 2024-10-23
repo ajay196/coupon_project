@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www development",
+    "test": "jest --coverage --testTimeout=10000"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -19,6 +20,13 @@
     "sequelize-cli": "^6.6.2"
   },
   "devDependencies": {
+    "jest": "^29.7.0",
     "nodemon": "^3.1.7"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   }
 }
