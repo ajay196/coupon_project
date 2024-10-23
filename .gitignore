@@ -55,3 +55,4 @@ output.txt
 temp.txt
 package-lock.json
 /cron/logs.txt
+coverage
